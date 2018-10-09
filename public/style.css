@@ -1,45 +1,69 @@
-body {
-	margin: 0;
-	padding: 0;
+/* Bootstrap */
+#navbarColor03 a {
+	color: #DCDCDC;
 }
 
-#header {
-	background: #196f3d;
-	display: flex;
-	position: relative;
-	width: 100%;
-}
-
-#header span {
+#navbarColor03 a:hover {
 	color: #FFF;
 }
 
-#header h1 {
-	text-transform: uppercase;
-	color: black;
+.navbar{
+	border-bottom: 5px #e9ecef;
+	border-bottom-style: double;
 }
 
-.header-container {
+.navbar-light .navbar-brand{
+	color: #FFF !important;
+}
+
+.navbar-brand span {
+	color: #28D;
+}
+
+.navbar a:link {
+	background-color: transparent;
+}
+
+.arrow-left {
+	width: 2em;
+	height: auto;
+	display: flex;
+	border: 1px solid #656565;
+	border-radius: 5px;
+}
+
+.arrow-left:hover {
+	border: 1px solid #28D;
+}
+
+.arrow-left a {
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding: 0.4em 0.5em;
 }
 
-.temarios {
-    width: 18em;
-    border: 1px solid #dcdcdc;
-    margin: 0 0.5em 1em;
-    display: block;
-    float: left;
+header {
+	margin-bottom: 3em;
+	padding: 0 3em;
 }
 
-.temarios header {
-	padding: 0 9px;
-	display: contents;
-	vertical-align: middle;
-	text-align: center;
-	width: 100%;
+.footer {
+	padding: 2em 2em;
+	border-top: 5px #e9ecef;
+	border-top-style: double;
 }
 
-.temarios header a {
-    text-decoration: none;
+.jumbotron {
+	margin-bottom: 0rem !important;
+	/*padding: 4rem 2rem;
+	border-bottom: 5px #FFF;;
+	border-bottom-style: double;*/
+}
+
+.container-text {
+	background: #FFF;
+	padding: 3em 4em;
+	border: 5px double #e9ecef;
 }

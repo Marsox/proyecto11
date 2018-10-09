@@ -3,14 +3,27 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Inicio - Proyecto11</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="http://proyecto11.local/style.css">
+	<link rel="stylesheet" type="text/css" href="http://proyecto11.local/source/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://proyecto11.local/source/css/all.css">
 </head>
 <body>
+	
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #343a40;">
+		<a class="navbar-brand" href="http://proyecto11.local/">Proyecto<span>11</span></a>
 
-	<div id="header">
-		<div class="header-container">
-			<h1><span>Proyecto</span>11</h1>
+		<div class="collapse navbar-collapse" id="navbarColor03">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="phpinfo.php">PHP Info</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="plantilla.php">Plantilla</a>
+				</li>
+			</ul>
 		</div>
+	</nav>
+
 	</div>
 
 	<br>
@@ -45,6 +58,10 @@
 			<p>Sesiones y Cookies.</p>
 		</header>
 	</div>
-
+	
+	<script src="http://proyecto11.local/source/js/jquery-3.3.1.min.js"></script>
+	<script src="http://proyecto11.local/source/js/popper.js"></script>
+	<script src="http://proyecto11.local/source/js/bootstrap.min.js"></script>
+	<script src="http://proyecto11.local/source/js/all.js"></script>
 </body>
 </html>
