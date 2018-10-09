@@ -24,40 +24,79 @@
 		</div>
 	</nav>
 
-	</div>
+	<div class="container-fluid jumbotron text-center">
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="card mb-4 shadow-sm">
+					<div class="card-body">
+						<h5 class="card-title">Tema 1</h5>
+						<p class="card-text">Arquitectura y Herramientas de Programación. Entorno de Desarrollo.</p>
+						<a href="/tema1" class="btn btn-primary">Entrar</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card mb-4 shadow-sm">
+					<div class="card-body">
+						<h5 class="card-title">Tema 2</h5>
+						<p class="card-text">Sintaxis. Tipos de datos, Variables y Operadores. Arrays. Estructuras de Control. Funciones. Sintaxis alternativa.</p>
+						<a href="/tema2" class="btn btn-primary">Entrar</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card mb-4 shadow-sm">
+					<div class="card-body">
+						<h5 class="card-title">Tema 3</h5>
+						<p class="card-text">Variables Globales, php.ini e include.</p>
+						<a href="/tema3" class="btn btn-primary">Entrar</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card mb-4 shadow-sm">
+					<div class="card-body">
+						<h5 class="card-title">Tema 4</h5>
+						<p class="card-text">GET y POST.</p>
+						<a href="/tema4" class="btn btn-primary">Entrar</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card mb-4 shadow-sm">
+					<div class="card-body">
+						<h5 class="card-title">Tema 5</h5>
+						<p class="card-text">Sesiones y Cookies.</p>
+						<a href="/tema5" class="btn btn-primary">Entrar</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card mb-4 shadow-sm">
+					<div class="card-body">
+						<h5 class="card-title">Tema 6</h5>
+						<p class="card-text">Formularios Amigables.</p>
+						<a href="/tema6" class="btn btn-primary">Entrar</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card mb-4 shadow-sm">
+					<div class="card-body">
+						<h5 class="card-title">Tema 8</h5>
+						<p class="card-text">Validación de Formularios.</p>
+						<a href="/tema8" class="btn btn-primary">Entrar</a>
+					</div>
+				</div>
+			</div>
 
-	<br>
-
-	<div class="temarios">
-		<header>
-			<h2><a href="#">Tema 1</a></h2>
-			<p>Arquitectura y Herramientas de Programación. Entorno de Desarrollo.</p>
-		</header>
+		</div>
 	</div>
-	<div class="temarios">
-		<header>
-			<h2><a href="/tema2">Tema 2</a></h2>
-			<p>Sintaxis. Tipos de datos, Variables y Operadores. Arrays. Estructuras de Control. Funciones. Sintaxis alternativa.</p>
-		</header>
-	</div>
-	<div class="temarios">
-		<header>
-			<h2><a href="/tema3">Tema 3</a></h2>
-			<p>Variables Globales, php.ini e include.</p>
-		</header>
-	</div>
-	<div class="temarios">
-		<header>
-			<h2><a href="/tema4">Tema 4</a></h2>
-			<p>GET y POST.</p>
-		</header>
-	</div>
-	<div class="temarios">
-		<header>
-			<h2><a href="/tema5">Tema 5</a></h2>
-			<p>Sesiones y Cookies.</p>
-		</header>
-	</div>
+	<footer class="footer">
+		<div class="container">
+			<span class="text-muted">Eduardo Marso © 2018-2019.</span>
+		</div>
+	</footer>
 	
 	<script src="http://proyecto11.local/source/js/jquery-3.3.1.min.js"></script>
 	<script src="http://proyecto11.local/source/js/popper.js"></script>
