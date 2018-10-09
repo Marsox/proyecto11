@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Ejercicio 4</title>
+	<title>Ejercicio 8</title>
 	<link rel="stylesheet" type="text/css" href="http://proyecto11.local/style.css">
 	<link rel="stylesheet" type="text/css" href="http://proyecto11.local/source/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="http://proyecto11.local/source/css/all.css">
@@ -31,30 +31,21 @@
 
 	<div class="container-fluid jumbotron">
 		<header>
-			<h2 class="display-4 text-center">Ejercicio 4</h2>
+			<h2 class="display-4 text-center">Ejercicio 8</h2>
 		</header>
 
 		<div class="container-text">
-			<p class="lead">Escribir un programa que calcule el número combinatorio M/N que era M!/(N!*(M-N)!). Para ello hará uso de la función factorial.</p>
+			<p class="lead">Mostrar en una tabla el cuadrado y el cubo de los cinco primeros números enteros que siguen a uno previamente introducido. Los datos deben aparecer encolumnados.</p>
 			<h4>Solución</h4>
 			<?php 
 
-			function factorial($numero) {
+				$num =2;
+				$tope = $num + 5;
 
-				$resultado = 1;
-
-				for ($i=1; $i <= $numero; $i++) { 
-					$resultado *= $i;
+				while ($num <= $tope) {
+					echo "El cuadrado de " . $num . " es: " . pow($num,2) . " - " . "El cubo de " . $num . " es: " . pow($num,3) . "<BR>";
+					$num++;
 				}
-				return $resultado;
-			}
-
-			$m = 6;
-			$n = 4;
-
-			$solucion = factorial($m) / (factorial($n) * factorial($m-$n));
-
-			echo "Solución $solucion";
 
 			?>
 		</div>

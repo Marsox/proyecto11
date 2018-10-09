@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Ejercicio 4</title>
+	<title>Ejercicio 3</title>
 	<link rel="stylesheet" type="text/css" href="http://proyecto11.local/style.css">
 	<link rel="stylesheet" type="text/css" href="http://proyecto11.local/source/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="http://proyecto11.local/source/css/all.css">
@@ -31,34 +31,43 @@
 
 	<div class="container-fluid jumbotron">
 		<header>
-			<h2 class="display-4 text-center">Ejercicio 4</h2>
+			<h2 class="display-4 text-center">Ejercicio 3</h2>
 		</header>
 
 		<div class="container-text">
-			<p class="lead">Escribir un programa que calcule el número combinatorio M/N que era M!/(N!*(M-N)!). Para ello hará uso de la función factorial.</p>
+			<p class="lead">Escribir un programa que calcule las raíces, bien reales o imaginarias, de una ecuación de segundo grado. El programa también debe ser capaz de operar con valores nulos para el coeficiente de orden 2.<br>
+			La ecuacion a resolver es ax^2+bx+c=0.</p>
 			<h4>Solución</h4>
-			<?php 
+			<?php
+			//La ecuacion a resolver es ax^2+bx+c=0
+			$a = 0;
+			$b = 1;
+			$c = 1;
 
-			function factorial($numero) {
+			if($a == 0){
+			    $sol = -$c / $b;
+			    echo "x = $sol <br>";
+			}else{
+			    $discriminante = $b * $b - 4 * $a * $c;
 
-				$resultado = 1;
-
-				for ($i=1; $i <= $numero; $i++) { 
-					$resultado *= $i;
-				}
-				return $resultado;
+			    if($discriminante > 0){
+			        $sol1 = (-$b + sqrt($discriminante))/(2 * $a);
+			        $sol2 = (-$b - sqrt($discriminante))/(2 * $a);
+			        echo "x1 = $sol1<br>";
+			        echo "x2 = $sol2<br>";
+			    }elseif($discriminante == 0){
+			        $sol = -$b / (2 * $a);
+			        echo "x = $sol<br>";
+			    }else{
+			        $solReal = -$b / (2 * $a);
+			        $solImaginaria = sqrt(-$discriminante) / (2 * $a);
+			        echo "x1 = $solReal + {$solImaginaria}i<br>";
+			        echo "x2 = $solReal - {$solImaginaria}i<br>";
+			    }
 			}
-
-			$m = 6;
-			$n = 4;
-
-			$solucion = factorial($m) / (factorial($n) * factorial($m-$n));
-
-			echo "Solución $solucion";
 
 			?>
 		</div>
-		
 	</div>
 	<footer class="footer">
 		<div class="container">

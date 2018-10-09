@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Ejercicio 4</title>
+	<title>Ejercicio 1</title>
 	<link rel="stylesheet" type="text/css" href="http://proyecto11.local/style.css">
 	<link rel="stylesheet" type="text/css" href="http://proyecto11.local/source/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="http://proyecto11.local/source/css/all.css">
@@ -31,30 +31,54 @@
 
 	<div class="container-fluid jumbotron">
 		<header>
-			<h2 class="display-4 text-center">Ejercicio 4</h2>
+			<h2 class="display-4 text-center">Ejercicio 1</h2>
 		</header>
 
 		<div class="container-text">
-			<p class="lead">Escribir un programa que calcule el número combinatorio M/N que era M!/(N!*(M-N)!). Para ello hará uso de la función factorial.</p>
+			<p class="lead">Escribir un programa que cuente de un texto dado:<br>
+				- Nº de caracteres en blanco.<br>
+				- Nº de dígitos.<br>
+				- Nº de letras.<br>
+				- Nº de líneas.<br>
+				- Nº de otros caracteres.<br>
+			Se deben crear funciones para comprobar si un carácter es numérico, alfanumérico u otra cosa.</p>
 			<h4>Solución</h4>
-			<?php 
+			<?php
+			include 'funciones_3_6.php';
 
-			function factorial($numero) {
+			$cadena = 'En un lugar de la mancha 123 de cuyo nombre... vivia un hidalgo caballero con #twitter';
 
-				$resultado = 1;
 
-				for ($i=1; $i <= $numero; $i++) { 
-					$resultado *= $i;
+			$blancos = 0;
+			$digitos = 0;
+			$letras = 0;
+			$lineas = 1;
+			$otros = 0;
+
+			$longitud = strlen($cadena);
+			for ($i=0; $i < $longitud ; $i++) {
+				$caracter = substr($cadena, $i, 1);
+				if (es_blanco($caracter)){
+					$blancos++;
+				}elseif(es_letra($caracter)){
+					$letras++;
+				}elseif(es_digito($caracter)){
+					$digitos++;
+				}elseif(es_linea($caracter)){
+					$lineas++;
+				}else{
+					$otros++;
 				}
-				return $resultado;
+
 			}
 
-			$m = 6;
-			$n = 4;
-
-			$solucion = factorial($m) / (factorial($n) * factorial($m-$n));
-
-			echo "Solución $solucion";
+			echo 'De la cadena: "' . $cadena. '".<br/>';
+			echo 'Los espacios en blanco son: ' . $blancos . '.<br/>';
+			echo 'Hay ' . $digitos . ' digitos.<br/>';
+			echo 'Tenemos ' . $letras . ' letras alfabéticas.<br/>';
+			echo 'Hay ' . $lineas . ' líneas en el texto.<br/>';
+			echo 'El resto de caracteres son ' . $otros . '.<br/>';
+			echo 'En total hay ' . $longitud . ' caracteres.';
 
 			?>
 		</div>
