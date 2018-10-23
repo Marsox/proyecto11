@@ -1,18 +1,22 @@
-<?php 
+<?php
 
-include "carrito.php";
-include "producto.php";
+spl_autoload_register(function($clase) {
+	$archivo = $clase . '.php';
+	include $archivo;
+});
+session_start();
+session_destroy();
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Carrito de la compra</title>
+	<title>Destroy</title>
 	<link rel="stylesheet" type="text/css" href="http://proyecto11.local/style.css">
 	<link rel="stylesheet" type="text/css" href="http://proyecto11.local/source/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="http://proyecto11.local/source/css/all.css">
-	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
 	
@@ -38,31 +42,12 @@ include "producto.php";
 
 	<div class="container-fluid jumbotron">
 		<header>
-			<h2 class="display-4 text-center">Carrito de la compra 2.0</h2>
+			<h2 class="display-4 text-center">Adios.</h2>
 		</header>
 
 		<div class="container-text">
-			<?php 
-
-				$p1 = new Producto("Espuma de afeitar", 3.5);
-				$p2 = new Producto("Cereales bolas de chocolate", 5.99);
-				$p3 = new Producto("Servilletas 20x20", 1.2);
-
-				$carrito = new Carrito();
-				$carrito->meter($p1);
-				$carrito->meter($p2);
-				$carrito->meter($p3);
-				$carrito->quitar(1);
-
-				$carrito->masUnidad(0);
-				$carrito->masUnidad(0);
-				$carrito->menosUnidad(0);
-				$carrito->menosUnidad(2);
-				$carrito->menosUnidad(2);
-
-				$carrito->mostrar();
-				
-			?>
+			<p class="lead">Has salido de la sesión.</p>
+			<a href="http://proyecto11.local/tema11">Volver</a>
 		</div>
 		
 	</div>

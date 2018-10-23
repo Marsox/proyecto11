@@ -5,6 +5,8 @@ spl_autoload_register(function($clase) {
 	include $archivo;
 });
 
+session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +36,9 @@ spl_autoload_register(function($clase) {
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="http://proyecto11.local/plantilla.php">Plantilla</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="destroy.php">Eliminar Sesión</a></a>
 				</li>
 			</ul>
 		</div>
