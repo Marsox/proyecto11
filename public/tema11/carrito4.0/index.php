@@ -7,6 +7,8 @@ spl_autoload_register(function($clase) {
 
 session_start();
 
+// $carrito = Carrito::getCarrito();
+
 ?>
 
 <!DOCTYPE html>
@@ -57,27 +59,35 @@ session_start();
 				$p3 = new Producto("Servilletas 20x20", 1.2);
 
 				$carrito = Carrito::getCarrito();
-				$carrito->meter($p1);
-				$carrito->meter($p2);
-				$carrito->meter($p3);
-				$carrito->quitar(1);
+				// $carrito->meter($p1);
+				// $carrito->meter($p2);
+				// $carrito->meter($p3);
+				// $carrito->quitar(1);
 
-				$carrito->masUnidad(0);
-				$carrito->masUnidad(0);
-				$carrito->menosUnidad(2);
-				$carrito->menosUnidad(2);
+				// $carrito->masUnidad(0);
+				// $carrito->masUnidad(0);
+				// $carrito->menosUnidad(2);
+				// $carrito->menosUnidad(2);
 
 				$d1 = new Descuento("Código XDDS1234", 2);
 
-				$carrito->meter($d1);
+				// $carrito->meter($d1);
 
 				$p5 = new Producto("Cámara canon x2", 96);
 				$p6 = new Producto("Tarjeta de memoria 8Gb", 12);
 				$p7 = new Producto("Mini trípode", 5);
-				$pack1 = new Pack(array($p5, $p6, $p7));
-				$carrito->meter($pack1);
+				$pack1 = new Pack([$p5, $p6, $p7]);
+				// $carrito->meter($pack1);
 
 				$carrito->mostrar();
+
+				echo "<br><br>";
+				echo $p1;
+				echo $p2;
+				echo $p3;
+				echo $d1;
+				echo $pack1;
+				$pack1->detalles();
 				
 			?>
 		</div>

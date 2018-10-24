@@ -3,10 +3,12 @@
 class Producto implements iEnCarrito
 {
 
+	use MasMenos;
+	use EnlaceComprar;
+
 	private $nombre;
 	private $precio;
 	private $iva;
-	private $cantidad = 1;
 
 	public function mostrar()
 	{
@@ -30,21 +32,16 @@ class Producto implements iEnCarrito
 		$this->iva = $iva;
 	}
 
-	public function masUnidad($unidades = 1)
-	{
-		$this->cantidad += $unidades;
-	}
-
-	public function menosUnidad()
-	{
-		if ($this->cantidad > 0) {
-			$this->cantidad--;
-		}
-	}
-
 	public function permiteUnidades()
 	{
 		return true;
+	}
+
+	public function __toString()
+	{
+		$salida = "<br>" . $this->nombre . " " . $this->precio . " &euro;";
+		$salida .= $this->EnlaceComprar();
+		return $salida;
 	}
 
 }

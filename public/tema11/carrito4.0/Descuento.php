@@ -2,9 +2,17 @@
 
 class Descuento implements iEnCarrito
 {
+
+	use EnlaceComprar;
+
 	private $motivo;
 	private $descuento;
 
+	public function __construct($motivo, $descuento)
+	{
+		$this->motivo = $motivo;
+		$this->descuento = $descuento;
+	}
 
 	public function mostrar()
 	{
@@ -36,13 +44,13 @@ class Descuento implements iEnCarrito
 		return false;
 	}
 
-	public function __construct($motivo, $descuento)
+	public function __toString()
 	{
-		$this->motivo = $motivo;
-		$this->descuento = $descuento;
+		$salida = "<br>" . $this->motivo . " " . $this->descuento . " &euro;";
+		$salida .= $this->enlaceComprar();
+		return $salida;
 	}
 
 }
 
 ?>
-
