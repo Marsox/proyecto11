@@ -20,6 +20,9 @@
 				<li class="nav-item">
 					<a class="nav-link" href="plantilla.php">Plantilla</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="localhost:8080">Base de Datos</a>
+				</li>
 			</ul>
 		</div>
 	</nav>
@@ -104,6 +107,15 @@
 						<h5 class="card-title">Tema 11</h5>
 						<p class="card-text">Programación Orientada a Objetos.</p>
 						<a href="/tema11" class="btn btn-primary">Entrar</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card mb-4 shadow-sm">
+					<div class="card-body">
+						<h5 class="card-title">Tema 12</h5>
+						<p class="card-text">PDO.</p>
+						<a href="/tema12" class="btn btn-primary">Entrar</a>
 					</div>
 				</div>
 			</div>
