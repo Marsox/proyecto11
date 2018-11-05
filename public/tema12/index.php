@@ -35,6 +35,7 @@
 	<div class="container-fluid jumbotron">
 		<h2 class="display-2 text-center">Tema 12</h2>
 		<a href="ejemplo1.php">Ejemplo 1: Conexión a la BD.</a><br>
+		<a href="ejemplo2.php">Ejemplo completo.</a><br>
 		
 		
 	</div>
