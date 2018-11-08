@@ -35,6 +35,7 @@
 			<li><a href="formulario0/formulario.php">Formulario 0</a></li>
 			<li><a href="formulario1/formulario.php">Formulario 1</a></li>
 			<li><a href="formulario2/formulario.php">Formulario 2</a></li>
+			<li><a href="formulario6/index.php">Formulario 6</a></li>
 		</ul>
 		
 		
